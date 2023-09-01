@@ -52,6 +52,6 @@ experimenting with python
 #### step 7 -- important python references
  
  make use of this valuable documentation from Python itself
- documention home page = https://docs.python.org/3/
- library reference = https://docs.python.org/3/library/index.html
- language reference = https://docs.python.org/3/reference/index.html
+ * documention home page = https://docs.python.org/3/
+ * library reference = https://docs.python.org/3/library/index.html
+ * language reference = https://docs.python.org/3/reference/index.html
