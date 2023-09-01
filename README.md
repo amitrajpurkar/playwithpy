@@ -38,9 +38,9 @@ experimenting with python
  
  make use of the good code repositories from gitlab or similar areas
  here is one example from me
- git clone https://github.com/amitrajpurkar/playwithpy.git
- https://github.com/trekhleb/learn-python
- https://github.com/virgili0/Virgilio
+ * git clone https://github.com/amitrajpurkar/playwithpy.git
+ * https://github.com/trekhleb/learn-python
+ * https://github.com/virgili0/Virgilio
 
 
 #### step 6 -- open & play with checked out code in pyCharm
