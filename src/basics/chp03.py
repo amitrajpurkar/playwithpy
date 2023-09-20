@@ -45,3 +45,41 @@ if pow.isnumeric() and dig.isnumeric():
     print("last n digits of 2 to the power", pow, "are", last_n)
 else:
     print("Shazaam !! the entered power is not numeric",pow)
+
+print("Exercise.problem.11 ---------------------")
+wt = input("enter weight in kilograms: ")
+wt_num = eval(wt) if wt.isnumeric() else 0
+if wt_num == 0:
+    print("verify is weight provided is numeric:",wt)
+else :
+    wt_pnd = round(wt_num * 2.20462, 1)
+    print("the weight in pounds is:",wt_pnd)
+
+
+print("Exercise.problem.12 ---------------------")
+num = input("give me a number: ")
+if not num.isnumeric():
+    print("you did not give numeric value !!",num)
+else:
+    fac = math.factorial(eval(num))
+    print("factorial of",num,"is",fac)
+
+print("Exercise.problem.13 ---------------------")
+num = input("give me a number: ")
+if not num.isnumeric():
+    print("you did not give numeric value !!",num)
+else:
+    print("sine value of",num,"is",math.sin(eval(num)))
+    print("cosine value of",num,"is",math.cos(eval(num)))
+    print("tangent value of",num,"is",math.tan(eval(num)))
+
+
+print("Exercise.problem.14 ---------------------")
+num = input("give an angle in degrees: ")
+if not num.isnumeric():
+    print("you did not give numeric value !!",num)
+else:
+    print("sine value of",num,"degrees is",math.sin(math.radians(eval(num))))
+
+
+print("Exercise.problem.15 ---------------------")
