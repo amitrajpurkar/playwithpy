@@ -34,11 +34,14 @@ else:
 
 print("Exercise.problem.10 ---------------------")
 pow = input("enter a number for power of 2: ")
-if pow.isnumeric():
+dig = input("enter how many last digits you want: ")
+if pow.isnumeric() and dig.isnumeric():
     calc_num = math.pow(2, eval(pow))
     last_digit = calc_num % 10
     print("last digit of 2 to the power", pow, "is",last_digit)
     last_2dig = calc_num % 100
     print("last two digits of 2 to the power", pow, "are", last_2dig)
+    last_n = calc_num % (math.pow(10,eval(dig)))
+    print("last n digits of 2 to the power", pow, "are", last_n)
 else:
     print("Shazaam !! the entered power is not numeric",pow)
