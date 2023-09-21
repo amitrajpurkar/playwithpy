@@ -83,3 +83,87 @@ else:
 
 
 print("Exercise.problem.15 ---------------------")
+for x in range(0, 345+15, 15):
+    print(x,"--",round(math.sin(math.radians(x)),4), round(math.cos(math.radians(x)),4))
+else:
+    print("completed printing the range")
+
+print("Exercise.problem.16 ---------------------")
+Y = input("enter a year (format=yyyy): ")
+
+if not Y or not Y.isnumeric() or Y.isspace():
+    print("you did not enter year number")
+else:
+    Y = eval(Y)
+    C = Y // 100
+    m = (15 + C - (C/4) - ((8 * C + 13)/25)) % 30
+    n = (4 + C - (C/4)) % 7
+    a = Y % 4
+    b = Y % 7
+    c = Y % 19
+    d = (19 * c + m) % 30
+    e = (2 * a + 4 * b + 6 * d + n) % 7
+    print("Y:",Y,"C:",C,"m:",m,"n:",n)
+    print("a:",a,"b:",b,"c:",c,"d:",d,"e:",e)
+
+    if (d == 29) and (e == 6):
+        print("easter falls one week earlier on April 19")
+    elif (d == 28) and (e ==6) and m in [2, 5, 10, 13, 16, 21, 24, 39]:
+        print("easter falls one week earlier on April 18")
+    else:
+        print("using march logic ... Mar(22+d+e)")
+        m_day = 22 + d + e
+        if m_day > 31:
+            print("easter falls on Apr:", math.floor(m_day - 31))
+        else:
+            print("easter falls on Mar:", math.floor(m_day))
+
+        print("or using april logic ... Apr(d+e-9)")
+        a_day = d + e - 9
+        if a_day < 1:
+            print("easter falls on Mar:", math.floor(31 - a_day))
+        else:
+            print("easter falls on Apr:", math.floor(a_day))
+
+
+print("Exercise.problem.17 ---------------------")
+Y = input("enter a year (format=yyyy): ")
+
+if not Y or not Y.isnumeric() or Y.isspace():
+    print("you did not enter year number")
+else:
+    Y = eval(Y)
+    isDivisibleBy4 = (Y % 4 == 0)
+    isDivisibleBy100 = (Y % 100 == 0)
+    isDivisibleBy400 = (Y % 400 == 0)
+
+    if isDivisibleBy400:
+        # for example 2000
+        print(Y, "is a Leap Year")
+    elif isDivisibleBy100:
+        #  for example 1900
+        print(Y, "is not a Leap Year")
+    elif isDivisibleBy4:
+         # for example 2008
+        print(Y, "is a Leap Year")
+    else:
+        print(Y, "is not a Leap Year")
+
+
+print("Exercise.problem.18 ---------------------")
+amt = input("give an amount of change less than $1.00: ")
+
+if not amt or not amt.isnumeric() or amt.isspace():
+    print("you did not enter year number")
+else:
+    amt = eval(amt)
+    quarters = amt // 25
+    remaining = amt % 25
+    dimes = remaining // 10
+    remaining = remaining % 10
+    nickels = remaining // 5
+    pennies = remaining % 5
+
+    print("to make that change, it will need", quarters, "quaters", dimes, "dimes",nickels,"nickels",pennies,"pennies")
+
+# print("Exercise.problem.19 ---------------------")
