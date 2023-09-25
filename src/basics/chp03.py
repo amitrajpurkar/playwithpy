@@ -1,11 +1,12 @@
 import math
 
+# https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf
 print("Book: a practical introduction to python programming -- by: Brian Heinold")
-print("Welcome to chapter 3")
+print("Welcome to chapter 3: Numbers")
 # https://guicommits.com/organize-python-code-like-a-pro/
 # https://stackoverflow.com/questions/37565793/how-to-let-the-user-select-an-input-from-a-finite-list
 
-
+# Functions and methods should be verbs - function-name should represent an action
 def tryout_exercise08():
     print("Exercise.problem.08 ---------------------")
 
@@ -196,7 +197,10 @@ def tryout_exercise19():
     pass
 
 
-
+# the method/ function below should be treated as single entry method into this script
+# it is more like the "public void main() method in java"..
+# just that this method is for this specific script --
+# for entire module in python we have main.py
 def selectFromDict(options, name):
     index = 0
     indexValidList = []
