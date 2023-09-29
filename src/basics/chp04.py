@@ -153,6 +153,17 @@ def tryout_exercise09():
     pass
 
 def tryout_exercise10():
+    print("multiplication game program for kids")
+    for q in range(1,11):
+        num_1 = randint(1, 10)
+        num_2 = randint(1, 10)
+        print("Question:"+str(q), num_1, "X", num_2)
+        solution = eval(input("Enter Solution: "))
+
+        if (solution == num_1 * num_2):
+            print("YaY you got it Right!!")
+        else:
+            print(solution, "Your Answer is Wrong")
     pass
 
 def tryout_exercise11():
@@ -176,9 +187,45 @@ def tryout_exercise11():
     pass
 
 def tryout_exercise12():
+    print("A jar of Halloween candy contains an unknown amount of candy -- guess it")
+    # num_of_candies = 0
+    # left_after_div_by_5 = num_of_candies % 5
+    # left_after_div_by_6 = num_of_candies % 6
+    # left_after_div_by_7 = num_of_candies % 7
+    #5x + 2 = 6y + 3 = 7z + 2
+
+    # for candies in range(200):
+    #     if (candies % 5 != 2):
+    #         continue
+    #     if (candies % 6 != 3):
+    #         continue
+    #     if (candies % 7 != 2):
+    #         continue
+    #
+    #     print(str(candies) + " candies are in the bowl!")
+    #     break
+
+    for i in range(200):
+        if i % 5 == 2:
+            if i % 6 == 3:
+                if i % 7 == 2:
+                    print(i, 'candies are in the bowl!')
+
     pass
 
 def tryout_exercise13():
+    print("program that lets the user play Rock-Paper-Scissors against the computer")
+    user_wins = 0
+    computer_wins = 0
+    for i in range(5):
+        compPick = randint(1,3) ## 1=rock; 2=paper; 3=scissor
+        uPick = input("enter your number: 1.rock, 2.paper, 3.scissor: ")
+        userPick = eval(uPick) if uPick.isnumeric() else 0
+        if userPick == compPick:
+            user_wins = user_wins + 1
+        else:
+            computer_wins = computer_wins + 1
+    print("Results -- user wins",user_wins,"times and computer wins",computer_wins,"times")
     pass
 
 
@@ -215,8 +262,14 @@ def selectFromDict(options, name):
                 tryout_exercise08()
             elif "exercise09" == selected:
                 tryout_exercise09()
+            elif "exercise10" == selected:
+                tryout_exercise10()
             elif "exercise11" == selected:
                 tryout_exercise11()
+            elif "exercise12" == selected:
+                tryout_exercise12()
+            elif "exercise13" == selected:
+                tryout_exercise13()
             elif "example01" == selected:
                 guess_a_number()
             else:
