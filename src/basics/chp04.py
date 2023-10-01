@@ -67,16 +67,23 @@ def tryout_exercise04():
     if not credits or not credits.isnumeric():
         print("credits given is not numeric", credits)
     else:
-        credits = int(credits)
-        if credits <= 23:
-            print("the student is a freshman")
-        elif credits > 23 and credits <= 53:
-            print("the student is a somophore")
-        elif credits > 53 and credits <= 83:
-            print("the student is a junior")
-        elif credits >= 84:
-            print("the student is a senior")
+        lvl = get_student_level(int(credits))
+        print("the student is a",lvl)
     pass
+
+
+def get_student_level(credits:int) -> str:
+    student_level =""
+    if credits <= 23:
+        student_level = "freshman" 
+    elif credits > 23 and credits <= 53:
+        student_level = "somophore"
+    elif credits > 53 and credits <= 83:
+        student_level = "junior"
+    elif credits >= 84:
+        student_level = "senior"
+    return student_level
+    
 
 def tryout_exercise05():
     num = randint(1, 10)
