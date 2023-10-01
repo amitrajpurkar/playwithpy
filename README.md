@@ -21,8 +21,8 @@ experimenting with python
 #### step 3 -- download pyCharm community edition
  
  this is an opensource tool (IDE) and a good one for Python.. its from IntelliJ Idea
- page link = https://www.jetbrains.com/pycharm/download/?section=windows -- navigate down to see Community edition
- exe link = https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+ [page link](https://www.jetbrains.com/pycharm/download/?section=windows) -- navigate down to see [Community edition
+ exe link](https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC)
  install this tool with all its default options
  after install run pyCharm and create a new Project
  use the default main.py that it creates or add your new script files
@@ -34,19 +34,22 @@ experimenting with python
  one example is C:/workspaces/<sample 01>
 
 
-#### step 5 -- connnect to a code repository
+#### step 5 -- connect to a code repository
  
  make use of the good code repositories from gitlab or similar areas
- here is one example from me
- * git clone https://github.com/amitrajpurkar/playwithpy.git
- * https://github.com/trekhleb/learn-python
+ here are few links
+ * a repo from myself: `git clone https://github.com/amitrajpurkar/playwithpy.git`
+ * a book reference for above exercises -- [link here](https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf)
+ * [one more repo for same book](https://github.com/henrytirla/Practical-Introduction-to-python)
+ * good ref from Oleksii Trekhleb @uber: [learn python repo](https://github.com/trekhleb/learn-python)
  * https://github.com/virgili0/Virgilio
+ * for book: Tiny Python Projects: [code repo](https://github.com/kyclark/tiny_python_projects/)
 
 
 #### step 6 -- open & play with checked out code in pyCharm
  
- just like we say read, read, read...
- there is another saying as well practise, practise, practise
+ * just like we say <span style="background-color: #FFFF00">read, read, read...</span>
+ * there is another saying as well <span style="background-color: #7FFFD4">practise, practise, practise</span>
 
 
 #### step 7 -- important python references
@@ -55,3 +58,4 @@ experimenting with python
  * documention home page = https://docs.python.org/3/
  * library reference = https://docs.python.org/3/library/index.html
  * language reference = https://docs.python.org/3/reference/index.html
+ * developer guide = https://devguide.python.org/

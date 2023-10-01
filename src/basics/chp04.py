@@ -73,7 +73,7 @@ def tryout_exercise04():
 
 
 def get_student_level(credits:int) -> str:
-    student_level =""
+    student_level:str = None
     if credits <= 23:
         student_level = "freshman" 
     elif credits > 23 and credits <= 53:
@@ -98,21 +98,27 @@ def tryout_exercise05():
             print('Sorry. The number is ', num)
 
 def tryout_exercise06():
-    high_price = 12 #-- if buying less than 10 items
-    medium_price = 10 #-- if buying between 10 to 99
-    low_price = 7 #-- if buying 100 or more
     num_of_items = input("how many items are you buying? (in numbers only) ")
     if not num_of_items or not num_of_items.isnumeric():
         print("enter numeric value",num_of_items)
     else:
         num_of_items = int(num_of_items)
-        if num_of_items < 10:
-            print("total cost = $",round(high_price * num_of_items),2)
-        elif num_of_items >=10 and num_of_items <=99:
-            print("total cost = $",round(medium_price * num_of_items),2)
-        elif num_of_items >= 100:
-            print("total cost = $",round(low_price * num_of_items),2)
+        cost = cost_based_on_volume(num_of_items)
+        print("total cost = $",cost)
     pass
+
+def cost_based_on_volume(num_of_items:int) -> int:
+    high_price:int = 12  # -- if buying less than 10 items
+    medium_price:int = 10  # -- if buying between 10 to 99
+    low_price:int = 7  # -- if buying 100 or more
+    total_cost:int = None
+    if num_of_items < 10:
+        total_cost = round((high_price * num_of_items), 2)
+    elif num_of_items >= 10 and num_of_items <= 99:
+        total_cost = round((medium_price * num_of_items), 2)
+    elif num_of_items >= 100:
+        total_cost = round((low_price * num_of_items), 2)
+    return total_cost
 
 def tryout_exercise07():
     x, y = input("enter two numbers ").split()
