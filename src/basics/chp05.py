@@ -95,7 +95,7 @@ def select_from_dict(choices, name):
                 print("we dont have this problem ready yet")
 
             # here call appropriate exercise-function
-            retry = input("want to retry this or other problems? y/n: ").lower()
+            retry = input("want to retry any problems? y/n: ").lower()
             if "y" == retry:
                 input_valid = False
             else:
