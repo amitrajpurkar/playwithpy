@@ -2,6 +2,7 @@
 experimenting with python
 
 ## steps to follow for practising python like a kata
+#### These steps will help us to start from Zero 
 
 #### step 1 -- download git 
  
@@ -43,13 +44,14 @@ experimenting with python
  * [one more repo for same book](https://github.com/henrytirla/Practical-Introduction-to-python)
  * good ref from Oleksii Trekhleb @uber: [learn python repo](https://github.com/trekhleb/learn-python)
  * https://github.com/virgili0/Virgilio
+ * on organizing code: https://guicommits.com/organize-python-code-like-a-pro/
  * for book: Tiny Python Projects: [code repo](https://github.com/kyclark/tiny_python_projects/)
 
 
 #### step 6 -- open & play with checked out code in pyCharm
  
- * just like we say <span style="background-color: #FFFF00">read, read, read...</span>
- * there is another saying as well <span style="background-color: #7FFFD4">practise, practise, practise</span>
+ * just like we say <span style="background-color: #CCFFFF">read, read, read...</span>
+ * there is another saying as well <span style="background-color: #99FFCC; font-weight:bold">practise, practise, practise</span>
 
 
 #### step 7 -- important python references
@@ -59,3 +61,35 @@ experimenting with python
  * library reference = https://docs.python.org/3/library/index.html
  * language reference = https://docs.python.org/3/reference/index.html
  * developer guide = https://devguide.python.org/
+
+
+#### summarization
+
+So what we learn in this step are the building blocks to understand Python
+ * data
+   * data types
+   * variables
+   * data structures
+     * Strings
+     * List, Arrays
+     * Set, tuples
+     * dictionaries
+ * instructions
+   * commands
+   * control structures
+     * if-else; if-elif-else; for; while
+   * sub-routines
+ * built-in libraries
+
+> After this, the next level up, is organizing code.
+> There is a difference between scripts which are simple commands; 
+> they get executed sequentially from top to bottom as encountered in the file.
+> Whereas programming addresses solving complex problems; 
+> modularizing related commands in functions; housing related functions in Classes; 
+> organizing modules; having unit tests for all functions; 
+> compiling code organized in modules into a package 
+> that can be shipped and executed and so on.
+> 
+> 
+> Out of these, developing a "function that does only one action" is key skill.
+> It also helps write testable code (TDD); break the code into nouns and verbs

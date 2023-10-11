@@ -1,3 +1,5 @@
+from math import log
+from random import randint
 
 def try_exercise01():
     print("Write a program that counts how many of the squares \
@@ -29,6 +31,17 @@ def try_exercise02():
 
 
 def try_exercise03():
+    num = input("enter a number: ")
+    n = eval(num) if num.isnumeric() else 0
+    accum = 0
+    if n == 0:
+        print("did you enter a number?",num)
+        return None
+
+    for i in range(1, n+1):
+        accum = accum + 1/i
+    accum = accum - log(n)
+    print("the calc for (1+ 1/2+ 1/3+.. + 1/n) - log(n) is",accum)
     pass
 
 
@@ -47,6 +60,18 @@ def try_exercise05():
     divisors.append(n)
     print("divisors of", n, "are", *divisors)
     print("sum of all divisors is", sum(divisors))
+    pass
+
+
+def try_exercise06():
+    pass
+
+
+def try_exercise07():
+    pass
+
+
+def try_exercise08():
     pass
 
 
