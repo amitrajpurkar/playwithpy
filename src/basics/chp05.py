@@ -66,15 +66,72 @@ def try_exercise05():
 
 
 def try_exercise06():
+    """A number is called a perfect number if it is equal to the sum of all of its divisors,
+    not including the number itself. For instance, 6 is a perfect number because
+    the divisors of 6 are 1, 2, 3, 6 and 6 = 1 + 2 + 3. As another example,
+    28 is a perfect number because its divisors are 1, 2, 4, 7, 14, 28
+    and 28 = 1 + 2 + 4 + 7 + 14. However, 15 is not a perfect number because its divisors
+    are 1, 3, 5, 15 and 15 6= 1 + 3 + 5. Write a program that finds all four
+    of the perfect numbers that are less than 10000."""
+    for num in range(1, 1000):
+        divisors = []
+        results = 0
+        perfect_num = []
+        not_prime = []
+        for i in range(1, num):
+            if num % i == 0:
+                divisors.append(i)
+                results = sum(divisors)
+
+        if results == num:
+            perfect_num.append(results)
+            print("divisors", divisors, "num", num, "SumDivisors", results, "Perfect NUm", perfect_num)
     pass
 
 
 def try_exercise07():
+    """An integer is called squarefree if it is not divisible by any perfect squares
+    other than 1. For instance, 42 is squarefree because its divisors are
+    1, 2, 3, 6, 7, 21, and 42, and none of those numbers (except 1) is a perfect square.
+    On the other hand, 45 is not squarefree because it is divisible by 9,
+    which is a perfect square. Write a program that asks the user for an integer and
+    tells them if it is squarefree or not."""
+    divisors = []
+    results = 0
+    square_num = []
+    num = 49
+    for i in range(1, num):
+        if num % i == 0:
+            divisors.append(i)
+            results = sum(divisors)
+    for j in range(len(divisors)):
+        while divisors[j] != 1 and divisors[j] % sqrt(divisors[j]) == 0:
+            # sq =num / divisors[j] != 0
+            if num % divisors[j] == 0:
+                square_num.append(divisors[j])
+                return (num, "SQUARES FOUND,Its Squares are", square_num, divisors)
+            else:
+                return (num, "Is not a square", divisors)
     pass
 
 
 def try_exercise08():
-    pass
+    """Write a program that swaps the values of three variables a, b, and c, so that a gets the value
+    of b, b gets the value of c, and c gets the value of a."""
+    a, b, c = input("Enter 3 numbers: ").split()
+    # Store sum of all in a
+    a = a + b + c  # (a = 6)
+
+    # After this, b has value of a
+    b = a - (b + c)  # (b = 6 – (3+2) =1)
+
+    # After this, c has value of b
+    c = a - (b + c)  # (c = 6 – (1 + 3) = 2)
+
+    # After this, a has value of c
+    a = a - (b + c)
+
+    print(f"After swapping a = {a}, b = {b},  c = {c}")
 
 
 def try_exercise09():
@@ -86,16 +143,11 @@ def try_exercise09():
     pass
 
 
-"""
-Ask the user to enter 10 test scores. Write a program to do the following:
-(a) Print out the highest and lowest scores.
-(b) Print out the average of the scores.
-(c) Print out the second largest score.
-(d) If any of the scores is greater than 100, then after all the scores have been entered, print
-a message warning the user that a value over 100 has been entered.
-(e) Drop the two lowest scores and print out the average of the rest of them.
-"""
 def try_exercise10_1():
+    """
+    Ask the user to enter 10 test scores.
+    second version of the solution making use of List objects.
+    """
     mylist = []
     for i in range(10):
         score = eval(input(f'Enter Test Score {i + 1}: '))
@@ -118,6 +170,15 @@ def try_exercise10_1():
 
 
 def try_exercise10():
+    """
+    Ask the user to enter 10 test scores. Write a program to do the following:
+    (a) Print out the highest and lowest scores.
+    (b) Print out the average of the scores.
+    (c) Print out the second largest score.
+    (d) If any of the scores is greater than 100, then after all the scores have been entered, print
+    a message warning the user that a value over 100 has been entered.
+    (e) Drop the two lowest scores and print out the average of the rest of them.
+    """
     first_score = eval(input('Enter Test Score 1: '))
     largest = first_score
     smallest = first_score
@@ -150,13 +211,14 @@ def try_exercise10():
     print(f'The average was {ave_score}. The average score with the two lowaest scores dropped is {ave2_score}.')
     pass
 
-"""
-Write a program that computes the factorial of a number. 
-The factorial, n!, of a number n is the product of all the integers between 1 and n, 
-including n. For instance, 5! = 1 x 2 x 3 x 4 x 5 = 120.
-[Hint: Try using a multiplicative equivalent of the summing technique.]
-"""
+
 def try_exercise11():
+    """
+    Write a program that computes the factorial of a number.
+    The factorial, n!, of a number n is the product of all the integers between 1 and n,
+    including n. For instance, 5! = 1 x 2 x 3 x 4 x 5 = 120.
+    [Hint: Try using a multiplicative equivalent of the summing technique.]
+    """
     num = eval(input('Enter a number: '))
     fac = 1
     for i in range(1, num+1):
@@ -165,12 +227,12 @@ def try_exercise11():
     pass
 
 
-"""
-Write a program that asks the user to guess a random number between 1 and 10. If they guess
-right, they get 10 points added to their score, and they lose 1 point for an incorrect guess. Give
-the user five numbers to guess and print their score after all the guessing is done
-"""
 def try_exercise12():
+    """
+    Write a program that asks the user to guess a random number between 1 and 10. If they guess
+    right, they get 10 points added to their score, and they lose 1 point for an incorrect guess. Give
+    the user five numbers to guess and print their score after all the guessing is done
+    """
     score = 0
     for i in range(5):
         comp_guess = randint(1, 10)
@@ -188,13 +250,13 @@ def try_exercise12():
     pass
 
 
-"""
-In the last chapter there was an exercise that asked you to create a multiplication game for
-kids. Improve your program from that exercise to keep track of the number of right and
-wrong answers. At the end of the program, print a message that varies depending on how
-many questions the player got right.
-"""
 def try_exercise13():
+    """
+    In the last chapter there was an exercise that asked you to create a multiplication game for
+    kids. Improve your program from that exercise to keep track of the number of right and
+    wrong answers. At the end of the program, print a message that varies depending on how
+    many questions the player got right.
+    """
     print("multiplication game program for kids")
     rights = 0
     wrongs = 0
