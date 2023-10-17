@@ -37,7 +37,9 @@ def try_exercise01():
 
     pass
 
+
 # try_exercise01()
+
 
 def try_exercise02():
     """
@@ -69,42 +71,158 @@ def try_exercise03():
     pass
 
 
-try_exercise03()
+# try_exercise03()
 
 
 def try_exercise04():
+    """
+    Write a program that asks the user to enter a word and prints out whether that word contains
+    any vowels -- a, e, i, o, u
+    :return:
+    """
+    vowels = ["a","e","i","o","u"]
+    s = input("Enter a word: ")
+    n = 0
+    for v in vowels:
+        n += s.count(v) if s.find(v) != -1 else 0
+    print(f"the given word {s} has {n} vowels.")
     pass
+
+
+# try_exercise04()
 
 
 def try_exercise05():
+    """
+    Write a program that asks the user to enter a string. The program should create a new string
+    called new_string from the user’s string such that the second character is changed to an
+    asterisk and three exclamation points are attached to the end of the string. Finally, print
+    new_string
+    :return:
+    """
+    s = input("Enter a string: ")
+    new_s = s.replace(s[2-1],"*") + "!!!"
+    print(f"transforming {s} into {new_s} ")
     pass
+
+
+# try_exercise05()
 
 
 def try_exercise06():
+    """
+    Write a program that asks the user to enter a string s and then converts s to lowercase, removes
+    all the periods and commas from s, and prints the resulting string
+    :return:
+    """
+    s = input("Enter a string: ")
+    new_s = s.lower()
+    new_s = new_s.replace(".","")
+    new_s = new_s.replace(",","")
+    print(f"transforming to {new_s}")
     pass
+
+
+# try_exercise06()
 
 
 def try_exercise07():
+    """
+    Write a program that asks the user to enter a word and determines whether the word is a
+    palindrome or not. A palindrome is a word that reads the same backwards as forwards
+    :return:
+    """
+    s = input("Enter a string: ")
+    backward = s[::-1]
+    if s == backward:
+        print(f"the given word {s} is a Palindrome")
+    else:
+        print("the given word is not a Palindrome")
     pass
+
+
+# try_exercise07()
 
 
 def try_exercise08():
+    """
+    At a certain school, student email addresses end with @student.college.edu, while professor
+    email addresses end with @prof.college.edu. Write a program that first asks the
+    user how many email addresses they will be entering, and then has the user enter those addresses.
+    After all the email addresses are entered, the program should print out a message
+    indicating either that all the addresses are student addresses or that there were some professor
+    addresses entered.
+    :return:
+    """
+    student_address = "@student.college.edu"
+    professor_address = "@prof.college.edu"
+    n = input("How many email addresses you want to enter? ")
+    while not n or not n.isnumeric():
+        n = input("Invalid; enter the number of email addresses again: ")
+        continue
+    s = p = o = 0
+    for i in range(eval(n)):
+        email = input(f"email {i+1} = ")
+        if email.endswith(student_address):
+            s += 1
+        elif email.endswith(professor_address):
+            p += 1
+        else:
+            o += 1
+    print(f"out of the email addresses entered, we have {s} students, {p} professors and {o} others")
     pass
+
+
+# try_exercise08()
 
 
 def try_exercise09():
+    """
+    Ask the user for a number and then print the following, where the pattern ends at the number
+    that the user enters
+    :return:
+    """
+    space = " "
+    n = eval(input("Enter a number: "))
+    for i in range(n):
+        print((space * i) + str(i + 1))
     pass
+
+
+# try_exercise09()
 
 
 def try_exercise10():
+    """
+    Write a program that asks the user to enter a string, then prints out each letter of the string
+    doubled and on a separate line.
+    :return:
+    """
+    s = input("Enter a string: ")
+    for c in s:
+        print(c*2)
     pass
 
 
+# try_exercise10()
+
+
 def try_exercise11():
+    """
+    Write a program that asks the user to enter a word that contains the letter a. The program
+    should then print the following two lines: On the first line should be the part of the string up
+    to and including the first a, and on the second line should be the rest of the string
+    :return:
+    """
     pass
 
 
 def try_exercise12():
+    """
+    Write a program that asks the user to enter a word and then capitalizes every other letter of
+    that word. So if the user enters rhinoceros, the program should print rHiNoCeRoS
+    :return:
+    """
     pass
 
 
