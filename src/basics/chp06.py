@@ -214,7 +214,14 @@ def try_exercise11():
     to and including the first a, and on the second line should be the rest of the string
     :return:
     """
+    s = input("Enter a word that contains letter a: ")
+    idx = s.find("a")
+    print("part of string till a = ",s[0:idx+1])
+    print("part of string after a = ",s[idx+1:])
     pass
+
+
+# try_exercise11()
 
 
 def try_exercise12():
@@ -224,6 +231,9 @@ def try_exercise12():
     :return:
     """
     pass
+
+
+# try_exercise12()
 
 
 def try_exercise13():
