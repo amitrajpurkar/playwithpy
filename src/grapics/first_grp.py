@@ -7,6 +7,8 @@ def main():
   c.setOutline("#ccff99")
   c.setWidth(10)
   c.setFill("#ffcc00")
+
+
   c.draw(win)
   win.getMouse() # pause for click in window
   win.close()
