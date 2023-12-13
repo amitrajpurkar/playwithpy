@@ -47,6 +47,7 @@ experimenting with python
  * on organizing code: https://guicommits.com/organize-python-code-like-a-pro/
  * for book: Tiny Python Projects: [code repo](https://github.com/kyclark/tiny_python_projects/)
  * one graphics library: https://mcsp.wartburg.edu/zelle/python/
+ * API ref for above graphics lib: https://mcsp.wartburg.edu/zelle/python/graphics/graphics/index.html
 
 
 #### step 6 -- open & play with checked out code in pyCharm

@@ -39,10 +39,10 @@ PARENT VARIABLE  -->   w = Rectangle(Point(0,567), Point(1078, 0))
 
 
 #                    LABELS FOR YOUR SHAPES AND IMAGES
-
-
+import time
 
 from graphics import *
+from random import randrange
 
 
 def paint_wall_floor(win: GraphWin):
@@ -59,6 +59,17 @@ def paint_wall_floor(win: GraphWin):
     floor.setFill("#D49F88")
     pass
 
+
+
+    """
+    Paints a window with glass.
+
+    Args:
+        win (GraphWin): The window to paint.
+
+    Returns:
+        None
+    """
 def paint_window_with_glass(win: GraphWin):
     WindowPanelSHADOW = Rectangle(Point(500, 379), Point(838, 87))  # The Shadow from the Window Panel Frame
     WindowPanelSHADOW.draw(win)
@@ -983,6 +994,27 @@ def add_coffee_table(win: GraphWin):
     pass
 
 
+def random_color():
+    return color_rgb(randrange(0,256), randrange(0,256), randrange(0,256))
+
+def insert_annim(win: GraphWin):
+    circy = Circle(Point(30, 95), 20)
+    circy.draw(win)
+
+    # wish to animate the circle clockwise and then disappear
+    for i in range(20):
+        circy.setFill(random_color())
+        circy.move(30,0)
+        time.sleep(0.5)
+
+    for i in range(10):
+        circy.setFill(random_color())
+        circy.move(0, 20)
+        time.sleep(0.5)
+
+    circy.undraw()
+    pass
+
 def main():
     win = GraphWin("Living Room", 1079, 567) #-------1079,696
     paint_wall_floor(win)
@@ -996,6 +1028,7 @@ def main():
     add_left_chair(win)
     add_right_chair(win)
     add_coffee_table(win)
+    insert_annim(win)
 
 # THE END OF PROGRAM (DO NOT DELETE)
     win.getMouse()
