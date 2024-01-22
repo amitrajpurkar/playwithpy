@@ -230,6 +230,15 @@ def try_exercise12():
     that word. So if the user enters rhinoceros, the program should print rHiNoCeRoS
     :return:
     """
+    s = input("Enter a word: ")
+    flag = True
+    for c in s:
+        if flag:
+            print(c.upper(),end="")
+            flag = False
+        else:
+            print(c,end="")
+            flag = True
     pass
 
 
@@ -237,15 +246,82 @@ def try_exercise12():
 
 
 def try_exercise13():
+    """
+    Write a program that asks the user to enter two strings of the same length. The program
+    should then check to see if the strings are of the same length. If they are not, the program
+    should print an appropriate message and exit. If they are of the same length, the program
+    should alternate the characters of the two strings. For example, if the user enters abcde and
+    ABCDE the program should print out AaBbCcDdEe
+    :return:
+    """
+    s1 = input("Enter first string: ")
+    s2 = input("Enter second string: ")
+    if s1.__len__() != s2.__len__():
+        print("The two strings are not of the same length")
+        return
+    for i in range(s1.__len__()):
+        print(s1[i],s2[i],sep="",end="")
     pass
+
+
+# try_exercise13()
 
 
 def try_exercise14():
+    """
+    Write a program that asks the user to enter their name in lowercase and then capitalizes the
+    first letter of each word of their name.
+    :return:
+    """
+    s = input("Enter your full name in lowercase: ")
+    tokens = s.split()
+    for token in tokens:
+        print(token[0].upper(),end="")
+        for c in token[1:]:
+            print(c.lower(),end="")
+        print(" ",end="")
     pass
+
+
+# try_exercise14()
 
 
 def try_exercise15():
+    """
+    When I was a kid, we used to play this game called Mad Libs. The way it worked was a friend
+    would ask me for some words and then insert those words into a story at specific places
+    and read the story. The story would often turn out to be pretty funny with the words I had
+    given since I had no idea what the story was about. The words were usually from a specific
+    category, like a place, an animal, etc.
+    For this problem you will write a Mad Libs program. First, you should make up a story and
+    leave out some words of the story. Your program should ask the user to enter some words
+    and tell them what types of words to enter. Then print the full story along with the inserted
+    words. Here is a small example, but you should use your own (longer) example:
+    Enter a college class: CALCULUS
+    Enter an adjective: HAPPY
+    Enter an activity: PLAY BASKETBALL
+    CALCULUS class was really HAPPY today. We learned how to
+    PLAY BASKETBALL today in class. I can't wait for tomorrow's
+    class!
+    :return:
+    """
+    name = input(" What is your name: ")
+    country = input("Where are you from: ")
+    dream = input("What is your dream? ")
+    user_story = "Dear {name}, you will be a good programmer one day. " \
+                 "Always remember practice and practise till you make progress." \
+                 "You are from {country}, which is a beautiful place. " \
+                 "Believe in yourself, trust your instinct, " \
+                 "always keep your sense of wonder alive. Keep exploring " \
+                 "and keep trying till you achive your dream: {dream}".format(
+        name=name, country=country, dream=dream)
+
+    print(user_story)
+
     pass
+
+
+# try_exercise15()
 
 
 def try_exercise16():
@@ -257,11 +333,69 @@ def try_exercise17():
 
 
 def try_exercise18():
+    """
+    The goal of this exercise is to see if you can mimic the behavior of the in operator and the
+    count and index methods using only variables, for loops, and if statements.
+    (a) Without using the in operator, write a program that asks the user for a string and a letter
+    and prints out whether or not the letter appears in the string.
+    (b) Without using the count method, write a program that asks the user for a string and a
+    letter and counts how many occurrences there are of the letter in the string.
+    (c) Without using the index method, write a program that asks the user for a string and
+    a letter and prints out the index of the first occurrence of the letter in the string. If the
+    letter is not in the string, the program should say so.
+    :return:
+    """
+    s = input("Enter a string: ")
+    l = input("Enter a letter: ")
+
+    # part a
+    for c in s:
+        if c == l:
+            print("the letter",l, "is in the string",s)
+            break
+    else:
+        print("the letter",l, "is not in the string",s)
+
+    # part b
+    count = 0
+    for c in s:
+        if c == l:
+            count += 1
+    print("the letter",l, "appears",count,"times in the string",s)
+
+    # part c
+    index = -1
+    isLetterFound = False
+    for c in s:
+        index += 1
+        if c == l:
+            isLetterFound = True
+            print("the letter",l, "appears at index",index,"in the string",s)
+            break
+    if not isLetterFound:
+        print("the letter",l, "is not in the string",s)
+
     pass
+
+
+# try_exercise18()
 
 
 def try_exercise19():
+    """
+    Write a program that asks the user for a large integer and inserts commas into it according
+    to the standard American convention for commas in large numbers. For instance, if the user
+    enters 1000000, the output should be 1,000,000
+    :return:
+    """
+    n = input("Enter a large integer: ")
+    n = int(n)
+    print("{:,}".format(n))
+
     pass
+
+
+# try_exercise19()
 
 
 def try_exercise20():
