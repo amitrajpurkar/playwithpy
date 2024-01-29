@@ -325,6 +325,16 @@ def try_exercise15():
 
 
 def try_exercise16():
+    fname = input("Enter first name: ")
+    lname = input("Enter last name: ")
+    offer_letter = "Dear {fname} {lname},\n\n" \
+        "I am pleased to offer you our new Platinum Plus Rewards card " \
+        "at a special introductory APR of 47.99%. {fname}, " \
+        "an offer like this does not come along every day, " \
+        "so I urge you to call now toll-free at 1-800-314-1592. " \
+        "We cannot offer such a low rate for long, {fname}, so call right away"
+
+    print(offer_letter.format(fname=fname, lname=lname))
     pass
 
 
