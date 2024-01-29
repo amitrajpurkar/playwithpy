@@ -32,7 +32,6 @@ def exercise01():
     pass
 
 
-exercise01()
 
 
 def exercise02():
@@ -58,9 +57,6 @@ Write a program that generates a list of 20 random numbers between 1 and 100.
     print("how many even numbers are in the list =", len([x for x in L if x % 2 == 0]))
 
     pass
-
-
-exercise02()
 
 
 def exercise03():
@@ -92,9 +88,6 @@ def exercise03():
     pass
 
 
-exercise03()
-
-
 def exercise04():
     """
     Ask the user to enter a list containing numbers between 1 and 12.
@@ -108,9 +101,6 @@ def exercise04():
     pass
 
 
-exercise04()
-
-
 def exercise05():
     """
     Ask the user to enter a list of strings. Create a new list that
@@ -122,3 +112,62 @@ def exercise05():
     L = [x[1:] for x in L]
     print("after removing the first character of each string :",L)
     pass
+
+
+def exercise06():
+    """
+    Create the following lists using a for loop.
+    (a) A list consisting of the integers 0 through 49
+    (b) A list containing the squares of the integers 1 through 50.
+    (c) The list ['a','bb','ccc','dddd', . . . ] that ends with 26 copies of the letter z.
+    :return:
+    """
+    L1:list = [i for i in range(50)]
+    # L1 =[]
+    # for i in range(50):
+    #     L1.append(i)
+    print("list of integers 0 till 49 :",L1)
+    L2:list = [(i+1)**2 for i in range(50)]
+    print("list of squares of integers 1 till 50 :",L2)
+    alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    L3:list = [alphabets[i] * (i+1) for i in range(26)]
+    print("list of alphabets that starts with a, bb, ccc and ends with 26 copies of the letter z :",L3)
+    pass
+
+
+def exercise07():
+    """
+    Write a program that takes any two lists L and M of the same size and adds their elements
+    together to form a new list N whose elements are sums of the corresponding elements in L
+    and M. For instance, if L=[3,1,4] and M=[1,5,9], then N should equal [4,6,13].
+    :return:
+    """
+    L:list = eval(input("Enter a list of Integers: "))
+    M:list = eval(input("Enter second list of Integers: "))
+    if len(L) != len(M):
+        print("both lists need to be of same size")
+    else:
+        N:list = [L[i] + M[i] for i in range(len(L))]
+        print("sum of the corresponding elements in L and M =", N)
+    pass
+
+
+def exercise08():
+    """
+    Write a program that asks the user for an integer and creates a list that consists of the factors
+    of that integer`
+    :return:
+    """
+    int_from_user = int(input("Enter an integer: "))
+    L:list = [i for i in range(1,int_from_user+1) if int_from_user % i == 0]
+    print(f"factors of the given Integer {int_from_user} are ",L)
+    pass
+
+# exercise01()
+# exercise02()
+# exercise03()
+# exercise04()
+# exercise05()
+exercise06()
+# exercise07()
+# exercise08()
