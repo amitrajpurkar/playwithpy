@@ -20,7 +20,7 @@ def tryout_exercise01():
         print("the length entered was negative !!", length)
     else:
         length = eval(length)
-        len_in_inches = length * 2.54
+        len_in_inches = length / 2.54
         print("the length",length," cms is equal to ",len_in_inches,"inches")
     pass
 
